@@ -39,4 +39,24 @@ blackDiv.appendChild(secondParagraph);
 // Appending black div to main container
 container.appendChild(blackDiv);
 
+// Adds a click event to button 1 that changes background to blue and text to orange
+const btn1 = document.getElementById("btn1");
+btn1.addEventListener("click", (e) => {
+  e.target.style.background = "blue";
+  e.target.style.color = "orange";
+});
 
+// Adds a keydown event to button 2 that changes the background to black and text to red
+const btn2 = document.getElementById("btn2");
+btn2.addEventListener("dblclick", (e) => {
+  e.target.style.background = "black";
+  e.target.style.color = "red";
+});
+
+// Declares "buttons" as a node list which acts like an array and adds an event listener
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log(button.id);
+  });
+});
